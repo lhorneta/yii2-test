@@ -95,13 +95,14 @@ class Products extends ActiveRecord
 
         $query = new \yii\db\Query;
         if(isset($section_id) && $section_id !=0){
-            $query->select('*')
+            $query->select(Products::tableName().'.*')
                 ->from(Products::tableName())
                 ->leftJoin(SectionsToProducts::tableName(), ''.SectionsToProducts::tableName().'.`product_id` = '.Products::tableName().'.`id`')
                 ->where(['section_id' => $section_id])
                 ->orderBy($sort)
                 ->offset($pagination->offset)
                 ->limit($pagination->limit);
+
         }else{
             $query->select('*')
                 ->from(Products::tableName())

@@ -49,7 +49,7 @@
 					</td>
 					<td class="bold"><?=$value["qty"]*$value["price"]?> руб.</td>
 					<td>
-						<a href="<?=Yii::$app->urlManager->createUrl(["cart/delete", "product_id" => $value['id'],]);?>" class="link_delete">x удалить</a>
+						<a href="<?=Yii::$app->urlManager->createUrl(["cart/delete", "product_id" => $value['id']]);?>" class="link_delete">x удалить</a>
 					</td>
 					<td class="cart_right"></td>
 				</tr>

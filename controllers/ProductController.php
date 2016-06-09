@@ -42,6 +42,7 @@ class ProductController extends Controller
 			$product = Products::getProductById($product_id);
     	}else{$product = Products::getProductById(Yii::$app->getRequest()->getQueryParam('id'));}
 
+
         if($product['id']){
              return $this->render('product', [
             'product' => $product
@@ -50,7 +51,6 @@ class ProductController extends Controller
             return $this->redirect(Yii::$app->urlManager->createUrl(['site/error']));
         }
 
-       
     }
 
     public function actionSection()

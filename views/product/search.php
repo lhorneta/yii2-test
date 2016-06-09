@@ -48,4 +48,5 @@ $this->registerMetaTag([
     <?php } ?>
 	<?php } ?>
 	</table>
+
 <?php } ?>

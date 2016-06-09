@@ -41,5 +41,4 @@ class SectionBlock extends Widget {
 	}
 	
 }
-
 ?>

@@ -43,5 +43,4 @@
 #nextbutton{
     right:10px;
     background:url(../images/arrowBg.png) right center no-repeat;}
-#prewbutton:hover, #nextbutton:hover{
-    opacity:1;}
+#prewbutton:hover, #nextbutton:hover{opacity:1;}

@@ -1,4 +1,3 @@
-
 (function ($) {
 var hwSlideSpeed = 700;
 var hwTimeOut = 1400;
