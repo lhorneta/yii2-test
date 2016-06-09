@@ -34,7 +34,7 @@ $this->registerMetaTag([
                     </p>
                     <p class="price"><?=$product['price']?> руб.</p>
                     <p>
-                        <a class="link_cart" href="<? ?>"></a>
+                        <a class="link_cart" href="<?=Yii::$app->urlManager->createUrl(["cart/add", "product_id" => $product['id']]);?>"></a>
                     </p>
                 </div>
             </td>

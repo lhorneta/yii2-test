@@ -655,3 +655,5 @@ p.price {
 #topmenu a:hover, #topmenu a.active {
 	font-weight: bold;
 }
+
+.recount_span{cursor: pointer;border-bottom: 1px dashed #ccc;color:#ccc; }

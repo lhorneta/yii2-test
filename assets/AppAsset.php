@@ -25,6 +25,7 @@ class AppAsset extends AssetBundle
     public $js = [
      '/web/js/functions.js',
      '/web/js/slider.js',
+     '/web/js/main.js',
     ];
     public $depends = [
         'app\assets\MyAppAsset',

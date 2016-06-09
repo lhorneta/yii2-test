@@ -42,7 +42,7 @@ $this->registerMetaTag([
 						</td>
 						<td>
 							<p>
-								<a href="#" class="link_cart"></a>
+								<a href="<?=Yii::$app->urlManager->createUrl(["cart/add", "product_id" => $product['id']]);?>" class="link_cart"></a>
 							</p>
 						</td>
 					</tr>
