@@ -46,7 +46,8 @@ class IndexController extends Controller
 
     public function actionIndex()
     {
-
+        $session = Yii::$app->session;
+        $session->open();
         $query = Products::find()->orderBy(['id' => SORT_DESC])->all();
 
         $pagination = new Pagination([

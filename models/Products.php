@@ -48,9 +48,9 @@ class Products extends ActiveRecord
         $query->select('*')
             ->from(SectionsToProducts::tableName())
             ->leftJoin(Products::tableName(), ''.Products::tableName().'.`id` = '.SectionsToProducts::tableName().'.`product_id`')
-            ->where(['section_id' => $id])
-            ->offset($pagination->offset)
-            ->limit($pagination->limit);
+            ->where(['section_id' => $id]);
+          //  ->offset($pagination->offset)
+          //  ->limit($pagination->limit);
 
         $command = $query->createCommand();
         $resultQuery = $command->queryAll();
@@ -64,9 +64,9 @@ class Products extends ActiveRecord
         $query = new \yii\db\Query;
         $query->select('*')
             ->from(Products::tableName())
-            ->orderBy(['date'=> SORT_DESC])
-            ->offset($pagination->offset)
-            ->limit($pagination->limit);
+            ->orderBy(['date'=> SORT_DESC]);
+          //  ->offset($pagination->offset)
+          //  ->limit($pagination->limit);
 
         $command = $query->createCommand();
         $resultQuery = $command->queryAll();
@@ -80,9 +80,9 @@ class Products extends ActiveRecord
         $query = new \yii\db\Query;
         $query->select('*')
             ->from(Products::tableName())
-            ->where(['id' => $id])
-            ->offset($pagination->offset)
-            ->limit($pagination->limit);
+            ->where(['id' => $id]);
+          //  ->offset($pagination->offset)
+          //  ->limit($pagination->limit);
 
             $command = $query->createCommand();
             $resultQuery = $command->queryOne();
@@ -99,16 +99,16 @@ class Products extends ActiveRecord
                 ->from(Products::tableName())
                 ->leftJoin(SectionsToProducts::tableName(), ''.SectionsToProducts::tableName().'.`product_id` = '.Products::tableName().'.`id`')
                 ->where(['section_id' => $section_id])
-                ->orderBy($sort)
-                ->offset($pagination->offset)
-                ->limit($pagination->limit);
+                ->orderBy($sort);
+               // ->offset($pagination->offset)
+               // ->limit($pagination->limit);
 
         }else{
             $query->select('*')
                 ->from(Products::tableName())
-                ->orderBy($sort)
-                ->offset($pagination->offset)
-                ->limit($pagination->limit);
+                ->orderBy($sort);
+              //  ->offset($pagination->offset)
+              //  ->limit($pagination->limit);
         }
         $command = $query->createCommand();
         $resultQuery = $command->queryAll();
@@ -121,9 +121,9 @@ class Products extends ActiveRecord
         $query = new \yii\db\Query;
         $query->select('*')
             ->from(Products::tableName())
-            ->where($search)
-            ->offset($pagination->offset)
-            ->limit($pagination->limit);
+            ->where($search);
+          //  ->offset($pagination->offset)
+          //  ->limit($pagination->limit);
 
         $command = $query->createCommand();
         $resultQuery = $command->queryAll();

@@ -37,7 +37,7 @@ class CartController extends Controller
         $this->updateCart();
         //var_dump($_SESSION);
         return $this->render('cart',[
-                'products' =>  $session['item']
+                'products' =>  $_SESSION['item']
             ]);
     }
 

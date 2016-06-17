@@ -42,7 +42,7 @@ $model = new SearchForm();
             </div>
             <div class="cart">
                 <p class="cart_title">Корзина</p>
-                <? if(count($_SESSION['item'])){ ?>
+                <? if(isset($_SESSION['item'])){ ?>
                     <p class="blue">Текущий заказ</p>
                     <p>В корзине <span><?=($_SESSION['products_incart']) ? $_SESSION['products_incart'] : 0 ?></span> товаров<br>на сумму <span><?=($_SESSION['cart_cost']) ?$_SESSION['cart_cost'] : 0 ?></span> руб.</p>
                     <a href="<?=Yii::$app->urlManager->createUrl(["cart/view"]);?>">Перейти в корзину</a>

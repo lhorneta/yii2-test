@@ -24,6 +24,8 @@ class ProductController extends Controller
 
     public function beforeAction($action)
     {
+	    $session = Yii::$app->session;
+        $session->open();
         $model = new SearchForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) 
         {
