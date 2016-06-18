@@ -14,6 +14,7 @@ use yii\filters\VerbFilter;
  */
 class CrudImagesController extends Controller
 {
+    public $layout = 'admin';
     /**
      * @inheritdoc
      */

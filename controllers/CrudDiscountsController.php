@@ -14,6 +14,7 @@ use yii\filters\VerbFilter;
  */
 class CrudDiscountsController extends Controller
 {
+    public $layout = 'admin';
     /**
      * @inheritdoc
      */

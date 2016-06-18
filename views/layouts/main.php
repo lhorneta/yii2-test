@@ -68,6 +68,15 @@ $model = new SearchForm();
                 <li>
                    <a  href="<?=Yii::$app->urlManager->createUrl(["index/contacts"])?>" <?php if ($action == "contacts") { ?>class="active"<?php } ?>>Контакты</a>
                 </li>
+                <li>
+                    <img src="images/topmenu_border.png" alt="">
+                </li>
+                <li>
+                   <a  href="<?=Yii::$app->urlManager->createUrl(["admin"])?>" <?php if ($action == "admin") { ?>class="active"<?php } ?>>Админ панель</a>
+                </li>
+                <li>
+                    <img src="images/topmenu_border.png" alt="">
+                </li>
                 <!--<li>
                     <?php
                    /* echo Nav::widget([

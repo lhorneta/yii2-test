@@ -16,6 +16,8 @@ class SiteController extends Controller
 {
     public function behaviors()
     {
+        $session = Yii::$app->session;
+        $session->open();
         return [
             'access' => [
                 'class' => AccessControl::className(),

@@ -25,6 +25,8 @@ class IndexController extends Controller
 
     public function beforeAction($action)
     {
+        $session = Yii::$app->session;
+        $session->open();
         $model = new SearchForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) 
         {
@@ -46,8 +48,7 @@ class IndexController extends Controller
 
     public function actionIndex()
     {
-        $session = Yii::$app->session;
-        $session->open();
+        
         $query = Products::find()->orderBy(['id' => SORT_DESC])->all();
 
         $pagination = new Pagination([

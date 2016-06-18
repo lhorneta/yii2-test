@@ -9,7 +9,7 @@ use app\models\Products;
 class RestController extends ActiveController
 {
     public $modelClass = 'app\models\Products';
-
+    public $layout = 'admin';
     public function behaviors()
     {
         return [

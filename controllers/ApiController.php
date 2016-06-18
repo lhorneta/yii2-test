@@ -22,6 +22,8 @@ use app\models\ImagesToProducts;
 class ApiController extends Controller
 {
 
+    public $layout = 'admin';
+    
     public function behaviors()
     {
         return [

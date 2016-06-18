@@ -127,8 +127,7 @@ body {
 }
 
 #topmenu a:hover {
-	color: #25aded;
-	text-decoration: underline;
+	border-bottom: 1px dashed;
 }
 
 #search {
